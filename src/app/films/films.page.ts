@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { HTTP } from '@ionic-native/http/ngx';
 import { FilmsList } from './models/films.model';
 import { ModalController } from '@ionic/angular';
+import { ModalPage } from '../modal/modal.page';
 
 @Component({
   selector: 'app-films',
   templateUrl: './films.page.html',
   styleUrls: ['./films.page.scss'],
+  entryComponents:[ ModalPage ]
 })
 export class FilmsPage implements OnInit {
 
@@ -33,7 +35,12 @@ export class FilmsPage implements OnInit {
 
   async presentModal() {
     const modal = await this.modalController.create({
-      component: FilmsPage
+      component: ModalPage,
+      componentProps: {
+        firstName: 'Douglas',
+        lastName: 'Adams',
+        middleInitial: 'N'
+      }
     });
     return await modal.present();
   }
