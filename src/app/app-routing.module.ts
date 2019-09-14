@@ -26,7 +26,8 @@ const routes: Routes = [
   { 
     path: 'planets', 
     loadChildren: './planets/planets.module#PlanetsPageModule' 
-  }
+  },
+  { path: 'modal-page', loadChildren: './modal-page/modal-page.module#ModalPagePageModule' }
 ];
 
 @NgModule({
