@@ -11,9 +11,21 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
-  {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
+  { 
+    path: 'people', 
+    loadChildren: './people/people.module#PeoplePageModule' 
+  },
+  { 
+    path: 'films', 
+    loadChildren: './films/films.module#FilmsPageModule' 
+  },
+  { 
+    path: 'startships', 
+    loadChildren: './startships/startships.module#StartshipsPageModule' 
+  },
+  { 
+    path: 'planets', 
+    loadChildren: './planets/planets.module#PlanetsPageModule' 
   }
 ];
 

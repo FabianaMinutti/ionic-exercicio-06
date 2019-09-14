@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Startships</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let nave of naves.results">
+         {{nave.name}}
+        </ion-item>  
+      </ion-list>
+</ion-content>
