@@ -1,5 +1,7 @@
 {
   "name": "ionic-exercicio-06",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
